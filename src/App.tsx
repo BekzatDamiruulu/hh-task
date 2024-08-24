@@ -1,5 +1,6 @@
 import {
-  createBrowserRouter,
+  // createBrowserRouter,
+  createHashRouter,
   createRoutesFromElements,
   Route,
   RouterProvider,
@@ -8,7 +9,7 @@ import { HeroesList } from "./components/heroes-list";
 import "./App.css";
 import { HeroPage } from "./components/hero-page";
 
-const router = createBrowserRouter(
+const router = createHashRouter(
   createRoutesFromElements(
     <>
       <Route path="/" element={<HeroesList />}></Route>
@@ -20,8 +21,7 @@ const router = createBrowserRouter(
 function App() {
   return (
     <main>
-      <HeroesList />
-      {/* <RouterProvider router={router} /> */}
+      <RouterProvider router={router} />
     </main>
   );
 }
