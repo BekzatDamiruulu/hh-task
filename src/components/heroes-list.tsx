@@ -40,7 +40,7 @@ export function HeroesList() {
               onClick={() => setFilter("all")}
               className={clsx(
                 "h-10 border-[2px] border-teal-400 w-[250px] rounded-lg",
-                { "": filter === "all" }
+                { "bg-teal-400 text-white font-semibold": filter === "all" }
               )}
             >
               Показать все
@@ -49,7 +49,7 @@ export function HeroesList() {
               onClick={() => setFilter("onlyLiked")}
               className={clsx(
                 "h-10 border-[2px] border-teal-400 w-[250px] mt-2 rounded-lg",
-                { "": filter !== "all" }
+                { "bg-teal-400 text-white font-semibold": filter !== "all" }
               )}
             >
               Показать понравившийся
